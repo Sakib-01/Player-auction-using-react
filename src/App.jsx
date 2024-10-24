@@ -13,8 +13,24 @@ function App() {
 
   const [viewSelected, setViewSelected] = useState(false);
 
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+  const handlePlayerSelected = (player) => {
+    if (selectedPlayers.find((p) => p.id == player.id)) {
+      alert("player already selected");
+    } else if (selectedPlayers.length >= 6) {
+      alert("can't add more then 6 players");
+    } else if (coins < player.biddingPrice) {
+      alert(" dont have enough money");
+    } else {
+      setSelectedPlayers([...selectedPlayers, player]);
+      setCoins(coins - player.biddingPrice);
+    }
+  };
+  console.log(selectedPlayers);
+
   const handleAddCoin = () => {
-    setCoins(coins + 100000);
+    setCoins(coins + 10000000);
   };
   return (
     <div className="body">
@@ -24,10 +40,11 @@ function App() {
         <ToggleButtons
           viewSelected={viewSelected}
           setViewSelected={setViewSelected}
+          selectedPlayers={selectedPlayers}
         ></ToggleButtons>
 
         {!viewSelected ? (
-          <AllPlayers></AllPlayers>
+          <AllPlayers handlePlayerSelected={handlePlayerSelected}></AllPlayers>
         ) : (
           <SelectedPlayers></SelectedPlayers>
         )}

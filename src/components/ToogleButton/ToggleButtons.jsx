@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const ToggleButtons = ({ viewSelected, setViewSelected }) => {
+const ToggleButtons = ({ viewSelected, setViewSelected, selectedPlayers }) => {
   return (
     <div>
       <div className="flex flex-col md:flex md:flex-row  justify-end mt-6">
@@ -23,6 +23,7 @@ const ToggleButtons = ({ viewSelected, setViewSelected }) => {
           onClick={() => setViewSelected(true)}
         >
           Selected
+          <span>{selectedPlayers.length}</span>
         </button>
       </div>
     </div>

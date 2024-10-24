@@ -4,7 +4,7 @@ const Banner = ({ handleAddCoin }) => {
   return (
     <div>
       <div
-        className=" bg-slate-800 text-center py-10 flex flex-col justify-center items-center mt-10 rounded-2xl space-y-5"
+        className=" bg-slate-800 text-center py-16 flex flex-col justify-center items-center mt-10 rounded-2xl space-y-8"
         style={{ backgroundImage: "url('/public/assets/bg-shadow.png')" }}
       >
         <img className="w-36" src="/public/assets/banner-main.png" alt="" />
@@ -16,7 +16,7 @@ const Banner = ({ handleAddCoin }) => {
         </p>
         <button
           onClick={handleAddCoin}
-          className="mt-5 bg-green-500 text-white px-5 py-2 rounded"
+          className=" btn mt-5 bg-yellow-400 text-slate-800 px-5 py-2 rounded-lg "
         >
           Claim Free Credit
         </button>

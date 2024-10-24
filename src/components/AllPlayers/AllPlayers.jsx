@@ -10,8 +10,8 @@ const AllPlayers = ({ handlePlayerSelected }) => {
       .then((data) => setAllPlayers(data));
   }, []);
   return (
-    <div className="pb-52 border-2 lg:relative">
-      <h1 className="flex justify-start">Available players</h1>
+    <div className="pb-52  lg:relative">
+      <h1 className="flex justify-start font-bold">Available players</h1>
       <div className="grid grid-cols-1 md:grid md:grid-cols-3 gap-5">
         {allPlayers.map((player) => (
           <Player

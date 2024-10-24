@@ -7,6 +7,8 @@ import AllPlayers from "./components/AllPlayers/AllPlayers";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
 import SelectedPlayers from "./components/SelectedPlayers/SelectedPlayers";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [coins, setCoins] = useState(0);
@@ -17,21 +19,25 @@ function App() {
 
   const handlePlayerSelected = (player) => {
     if (selectedPlayers.find((p) => p.id == player.id)) {
-      alert("player already selected");
+      toast.error("Player already selected!");
     } else if (selectedPlayers.length >= 6) {
-      alert("can't add more then 6 players");
+      toast.error(`Can't select more than 6 players!`);
     } else if (coins < player.biddingPrice) {
-      alert(" dont have enough money");
+      toast.error(" Don't have enough money");
     } else {
       setSelectedPlayers([...selectedPlayers, player]);
       setCoins(coins - player.biddingPrice);
+      toast.success(`${player.name} has been added to your team!`);
     }
   };
   console.log(selectedPlayers);
 
   const handlePlayerRemove = (id) => {
     const updatePlayer = selectedPlayers.filter((player) => player.id !== id);
+    const removedPlayer = selectedPlayers.find((player) => player.id === id);
+
     setSelectedPlayers(updatePlayer);
+    toast.info(`${removedPlayer.name} has been removed from your team!`);
   };
 
   const handleAddCoin = () => {
@@ -54,12 +60,14 @@ function App() {
           <SelectedPlayers
             selectedPlayers={selectedPlayers}
             handlePlayerRemove={handlePlayerRemove}
+            setViewSelected={setViewSelected}
           ></SelectedPlayers>
         )}
       </div>
       <div className=" relative">
         <Newsletter></Newsletter>
         <Footer></Footer>
+        <ToastContainer></ToastContainer>
       </div>
     </div>
   );

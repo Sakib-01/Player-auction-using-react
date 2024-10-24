@@ -1,11 +1,15 @@
 import { MdDeleteForever } from "react-icons/md";
 import PropTypes from "prop-types";
 
-const SelectedPlayers = ({ selectedPlayers, handlePlayerRemove }) => {
+const SelectedPlayers = ({
+  selectedPlayers,
+  handlePlayerRemove,
+  setViewSelected,
+}) => {
   console.log(selectedPlayers);
   return (
     <div className="mb-40">
-      <h2 className="text-2xl mb-4">
+      <h2 className="text-2xl mb-4 font-bold text-left">
         Selected Players ({selectedPlayers.length}/6)
       </h2>
       {selectedPlayers.map((player) => (
@@ -28,12 +32,20 @@ const SelectedPlayers = ({ selectedPlayers, handlePlayerRemove }) => {
           </button>
         </div>
       ))}
+      <button
+        className="btn flex justify-start bg-yellow-500"
+        onClick={() => setViewSelected(false)}
+      >
+        Add More Player
+      </button>
     </div>
   );
 };
 
 SelectedPlayers.propTypes = {
   selectedPlayers: PropTypes.array,
+  handlePlayerRemove: PropTypes.func,
+  setViewSelected: PropTypes.func,
 };
 
 export default SelectedPlayers;

@@ -1,4 +1,6 @@
-const Header = () => {
+import { TbCoin } from "react-icons/tb";
+
+const Header = ({ coins }) => {
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -61,7 +63,9 @@ const Header = () => {
             </ul>
           </div>
           <div>
-            <a className="btn">Button</a>
+            <button className="btn">
+              {coins} Coin <TbCoin className="bg-yellow-400 rounded-full" />
+            </button>
           </div>
         </div>
       </div>

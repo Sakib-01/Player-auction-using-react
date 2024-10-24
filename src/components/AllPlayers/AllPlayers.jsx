@@ -10,7 +10,7 @@ const AllPlayers = (props) => {
       .then((data) => setAllPlayers(data));
   }, []);
   return (
-    <div className="pb-52 border-2 relative">
+    <div className="pb-52 border-2 lg:relative">
       <h1 className="flex justify-start">Available players</h1>
       <div className="grid grid-cols-1 md:grid md:grid-cols-3 gap-5">
         {allPlayers.map((player) => (

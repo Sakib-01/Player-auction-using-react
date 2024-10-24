@@ -3,7 +3,10 @@ import React from "react";
 const Newsletter = () => {
   return (
     <div>
-      <div className="w-8/12 mx-auto p-10  bg-gray-300 text-center   absolute -bottom-24 left-52 rounded-2xl space-y-8 border-2">
+      <div
+        className=" w-full lg:w-8/12 mx-auto p-10  bg-gray-300 text-center   absolute -bottom-40 lg:-bottom-24 lg:left-52 rounded-2xl space-y-8 border-2"
+        style={{ backgroundImage: `url('/public/assets/bg-shadow.png')` }}
+      >
         <h3 className="text-2xl mb-4 text-white">
           Subscribe to our Newsletter
         </h3>

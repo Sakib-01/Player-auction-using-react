@@ -6,9 +6,13 @@ import ToggleButtons from "./components/ToogleButton/ToggleButtons";
 import AllPlayers from "./components/AllPlayers/AllPlayers";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
+import SelectedPlayers from "./components/SelectedPlayers/SelectedPlayers";
 
 function App() {
   const [coins, setCoins] = useState(0);
+
+  const [viewSelected, setViewSelected] = useState(false);
+
   const handleAddCoin = () => {
     setCoins(coins + 100000);
   };
@@ -16,9 +20,17 @@ function App() {
     <div className="body">
       <Header coins={coins}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
-      <div className="relative">
-        <ToggleButtons></ToggleButtons>
-        <AllPlayers></AllPlayers>
+      <div className=" relative">
+        <ToggleButtons
+          viewSelected={viewSelected}
+          setViewSelected={setViewSelected}
+        ></ToggleButtons>
+
+        {!viewSelected ? (
+          <AllPlayers></AllPlayers>
+        ) : (
+          <SelectedPlayers></SelectedPlayers>
+        )}
         <Newsletter></Newsletter>
       </div>
       <Footer></Footer>

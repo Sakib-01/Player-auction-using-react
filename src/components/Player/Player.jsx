@@ -15,10 +15,7 @@ const Player = ({ player, handlePlayerSelected }) => {
   return (
     <div className="card card-compact bg-base-100 w-96 shadow-xl">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
+        <img className="h-48 w-full rounded-2xl" src={image} alt="Player" />
       </figure>
       <div className="card-body text-start space-y-2">
         <div className="flex gap-3 items-center ">

@@ -18,7 +18,7 @@ const SelectedPlayers = ({
           className="flex justify-between items-center border p-2 mb-2"
         >
           <div className=" flex gap-2">
-            {/* <div className="w-5 rounded-full">{player.image}</div> */}
+            <img className="w-12 rounded-full" src={player.image} alt="" />
             <div className="flex flex-col text-left">
               <h2>{player.name}</h2>
               <p className="text-gray-500">{player.role}</p>

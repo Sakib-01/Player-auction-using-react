@@ -36,7 +36,7 @@ function App() {
     <div className="body">
       <Header coins={coins}></Header>
       <Banner handleAddCoin={handleAddCoin}></Banner>
-      <div className=" relative">
+      <div>
         <ToggleButtons
           viewSelected={viewSelected}
           setViewSelected={setViewSelected}
@@ -46,11 +46,13 @@ function App() {
         {!viewSelected ? (
           <AllPlayers handlePlayerSelected={handlePlayerSelected}></AllPlayers>
         ) : (
-          <SelectedPlayers></SelectedPlayers>
+          <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
         )}
-        <Newsletter></Newsletter>
       </div>
-      <Footer></Footer>
+      <div className=" relative">
+        <Newsletter></Newsletter>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ const Newsletter = () => {
     <div>
       <div
         className=" w-full lg:w-8/12 mx-auto p-10  bg-gray-300 text-center   absolute -top-40 lg:-top-24 lg:left-52 rounded-2xl space-y-8 border-2"
-        style={{ backgroundImage: `url('/public/assets/bg-shadow.png')` }}
+        style={{ backgroundImage: "url('/assets/bg-shadow.png')" }}
       >
         <h3 className="text-2xl mb-4 text-white">
           Subscribe to our Newsletter

@@ -41,7 +41,7 @@ const Header = ({ coins }) => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">
-            <img className="w-16 " src="/public/assets/logo.png" alt="" />
+            <img className="w-16 " src="/assets/logo.png" alt="" />
           </a>
         </div>
 

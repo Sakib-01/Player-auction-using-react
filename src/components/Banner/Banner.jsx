@@ -5,7 +5,7 @@ const Banner = ({ handleAddCoin }) => {
     <div>
       <div
         className=" bg-slate-800 text-center py-16 flex flex-col justify-center items-center mt-10 rounded-2xl space-y-8"
-        style={{ backgroundImage: "url('/public/assets/bg-shadow.png')" }}
+        style={{ backgroundImage: "url('/assets/bg-shadow.png')" }}
       >
         <img className="w-36" src="/public/assets/banner-main.png" alt="" />
         <h2 className="text-4xl text-white">

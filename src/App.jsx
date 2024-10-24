@@ -29,6 +29,11 @@ function App() {
   };
   console.log(selectedPlayers);
 
+  const handlePlayerRemove = (id) => {
+    const updatePlayer = selectedPlayers.filter((player) => player.id !== id);
+    setSelectedPlayers(updatePlayer);
+  };
+
   const handleAddCoin = () => {
     setCoins(coins + 10000000);
   };
@@ -46,7 +51,10 @@ function App() {
         {!viewSelected ? (
           <AllPlayers handlePlayerSelected={handlePlayerSelected}></AllPlayers>
         ) : (
-          <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
+          <SelectedPlayers
+            selectedPlayers={selectedPlayers}
+            handlePlayerRemove={handlePlayerRemove}
+          ></SelectedPlayers>
         )}
       </div>
       <div className=" relative">

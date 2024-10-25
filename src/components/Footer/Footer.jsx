@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="mb-10">
         <img className="" src="/assets/logo-footer.png" alt="" />
       </div>
-      <div className="w-8/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="w-8/12 mx-auto grid grid-cols-1 ml-5 md:ml-40 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start">
           <h2 className="text-xl font-semibold mb-4">About Us</h2>
           <p className="text-left text-gray-400">
@@ -41,21 +41,21 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-start text-left">
+        <div className="flex flex-col items-start text-left ">
           <h2 className="text-xl font-semibold mb-4">Subscribe</h2>
           <p className="mb-4 text-gray-400">
             Subscribe to our newsletter for the latest updates.
           </p>
-          <form className="flex">
+          <div className="flex w-24  mr-10">
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-5 py-3 rounded-l-md border-none text-black"
+              className="px-5 py-3 rounded-l-md  text-black"
             />
-            <button className="bg-gradient-to-r from-blue-200 to-yellow-500 text-white px-4 rounded-r-md">
+            <button className="bg-gradient-to-r from-blue-200 to-yellow-500 text-white px-4 rounded-r-md ">
               Subscribe
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </footer>

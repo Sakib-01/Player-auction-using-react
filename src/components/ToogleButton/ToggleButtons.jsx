@@ -23,7 +23,7 @@ const ToggleButtons = ({ viewSelected, setViewSelected, selectedPlayers }) => {
           onClick={() => setViewSelected(true)}
         >
           Selected
-          <span>{selectedPlayers.length}</span>
+          <span>({selectedPlayers.length})</span>
         </button>
       </div>
     </div>
@@ -33,6 +33,7 @@ const ToggleButtons = ({ viewSelected, setViewSelected, selectedPlayers }) => {
 ToggleButtons.propTypes = {
   viewSelected: PropTypes.bool,
   setViewSelected: PropTypes.func,
+  selectedPlayers: PropTypes.array,
 };
 
 export default ToggleButtons;

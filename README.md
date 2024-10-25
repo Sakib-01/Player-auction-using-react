@@ -43,3 +43,7 @@ Dream11 Cricket Team Builder is a web application where users can choose their d
    - Built using Tailwind CSS to provide a modern, clean, and responsive design, ensuring a seamless experience across all devices.
 
 ---
+
+## Live link to the deployed project.
+
+- https://sparkling-zabaione-08b7e6.netlify.app/

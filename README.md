@@ -1,13 +1,13 @@
-# React + Vite
+<!-- # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh -->
 
-# Project Name: PH Players Draft
+# Project Name: Players Draft
 
 Assemble your ultimate Dream Cricket Team with a smooth and intuitive React-based application. This project allows users to select, manage, and update their cricket team based on available players, with coin limitations and easy validation, all in a responsive and well-designed interface.
 
